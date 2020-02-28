@@ -8,4 +8,6 @@ public static String getCurrentDate() {
     dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
     Date today = Calendar.getInstance().getTime();
     return dateFormat.format(today);
+    System.out.println("TimeFormatBranch Change");
+
 }
