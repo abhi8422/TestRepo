@@ -7,6 +7,8 @@ public static String getCurrentDate() {
     SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_1);
     dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
     Date today = Calendar.getInstance().getTime();
+    Date theDay = Calendar.getInstance().getMinute();
+    System.out.println("The day today:" + theday);
     return dateFormat.format(today);
     System.out.println("TimeFormatBranch Change");
 }
