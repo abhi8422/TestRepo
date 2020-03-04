@@ -2,12 +2,16 @@
  * Default date format 
  */
 public static final String DATE_FORMAT_2 = "dd-MMM-yyyy";
- 
+
+PK Test Changes
+
+
 public static String getCurrentDate() {
     SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_1);
     dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
     Date today = Calendar.getInstance().getTime();
     Date today1 = Calendar.getInstance().getHour();
     System.out.println("The day today is:" + today1);
+    return dateFormat.format(today);
 
 }
