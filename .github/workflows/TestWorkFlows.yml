@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - 'master'
-
+jobs:
   apk:
     name: Generate APK
     runs-on: ubuntu-18.04
