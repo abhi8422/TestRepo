@@ -1,8 +1,8 @@
 name: Build apk action
 on:
   push:
-    branches:
-      - 'master'
+   tags:
+      - v*
 jobs:
   apk:
     name: Generate APK
