@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         tvComponent = findViewById(R.id.tv_component);
         tvSize = findViewById(R.id.tv_size_);
         tvDate = findViewById(R.id.tv_date);
@@ -55,14 +54,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSave = findViewById(R.id.btn_save);
         imgDateReading = findViewById(R.id.img_date_reading);
         imgTimeReading = findViewById(R.id.img_time_reading);
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, arr);
         autoCompleteTextView.setThreshold(2);
         autoCompleteTextView.setAdapter(adapter);
-
         String curr_date = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault()).format(new Date());
         tvDate.setText(curr_date);
-
         Calendar calendar = Calendar.getInstance();
         mHour = calendar.get(Calendar.HOUR);
         mMinute = calendar.get(Calendar.MINUTE);
