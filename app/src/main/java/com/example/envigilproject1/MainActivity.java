@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         imgDateReading.setOnClickListener(this);
+
         imgTimeReading.setOnClickListener(this);
     }
 
@@ -99,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mYear = calendar.get(Calendar.YEAR);
             mDay = calendar.get(Calendar.DAY_OF_MONTH);
             mMonth = calendar.get(Calendar.MONTH);
-
             DatePickerDialog pickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker datePicker, int year, int monthofyear, int dayofmonth) {
@@ -108,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             },mYear, mMonth, mDay);
             pickerDialog.show();
         }
-
         if (view == imgTimeReading) {
             final Calendar calendar = Calendar.getInstance();
             mHour = calendar.get(Calendar.HOUR_OF_DAY);
