@@ -22,7 +22,7 @@ jobs:
           name: app
           path: app/build/outputs/apk/debug/app-debug.apk
   sign:
-    - name: Sign Android release
+      name: Sign Android release
       needs: apk
       runs-on: ubuntu-18.04
 
